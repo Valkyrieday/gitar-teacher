@@ -214,11 +214,11 @@ section {
   text-align: center;
   font-size: 36px;
   position: absolute;
+  width: 275px;
   top: 50%;
   right: 0;
-  /* transform: rotate(90deg); */
-  transform-origin: center center;
-
+  transform: rotate(90deg);
+  translate: 15% -50%;
 }
 
 .lesson-type-1 {
