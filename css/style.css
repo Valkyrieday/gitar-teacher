@@ -16,6 +16,27 @@ header {
   margin: auto;
 }
 
+.logo {
+  display: flex;
+  justify-content: flex-start;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 60px;
+  justify-content: flex-end;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: black;
+}
+
 body {
   font: 16px Montserrat, sans-serif;
   background-color: rgb(230, 230, 230);
@@ -29,6 +50,8 @@ section {
 
 .section-wrapper {
   width: 100%;
+  position: relative;
+  overflow: hidden;
 }
 
 .section-wrapper:has(.lesson) {
@@ -39,27 +62,42 @@ section {
   display: flex;
   align-items: center;
   height: 707px;
-  z-index: 0;
+  gap: 50px;
 }
 
 .hero-left {
   position: relative;
   width: 100%;
   height: 100%;
+  flex-basis: 50%;
 }
 
-.hero h1 {
+.hero-left .actorimg {
+  width: 883px;
+  height: 709px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.hero-right h1 {
   font-size: 64px;
   font-weight: 600;
   margin-bottom: 12px;
+  position: relative;
+  width: max-content;
+}
+
+.hero-right h1 span {
+  position: relative;
 }
 
 .hero-right {
   display: flex;
   flex-direction: column;
   margin-bottom: 200px;
-  left: 1050px;
-  
+  flex-basis: 50%;
+  position: relative;
 }
 
 .socials {
@@ -77,43 +115,9 @@ section {
   z-index: -1;
 }
 
-.actorimg {
-  max-width: 883px;
-  max-height: 709px;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-
-
-nav ul {
-  
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  gap: 60px;
-  justify-content: flex-end;
-  font-weight: 600;
-  font-size: 18px;
-}
-
-
-nav ul li a {
-  text-decoration: none;
-  color: black;
-}
-
-.logo {
-  display: flex;
-  justify-content: flex-start;
-}
-
 .buttonhero {
   padding: 15px 20px;
-  background-color: #F28B64;
+  background-color: #f28b64;
   color: rgb(255, 255, 255);
   border-radius: 100px;
   font-weight: 600;
@@ -125,17 +129,11 @@ nav ul li a {
   margin-bottom: 32px;
 }
 
-
-
 .lesson {
   display: flex;
   flex-direction: column;
   width: 100%;
   min-height: 100vh;
-}
-
-span {
-  position: relative;
 }
 
 .hero-right h1 span::after {
@@ -148,12 +146,10 @@ span {
   width: 100%;
 }
 
-
 .hero-right .actions {
   display: flex;
   gap: 30px;
   align-items: center;
-  
 }
 
 .hero-right .actions .chat-bts {
@@ -161,27 +157,27 @@ span {
   align-items: center;
   gap: 10px;
   font-weight: 300;
+}
 
+.circle {
+  position: absolute;
+  z-index: -1;
 }
 
 .circle-1 {
-  position: absolute;
-  white-space: nowrap;
   width: 194px;
+  transform: translate(-50%, -50%);
   height: 194px;
-  right: 15%;
-  top: 25%;
-  
+  left: 93%;
+  top: 55%;
 }
 
 .circle-2 {
-  position: absolute;
+  transform: translate(50%, 50%) rotate(45deg);
   width: 282px;
   height: 282px;
-  right: -7%;
-  top: 69%;
-  z-index: 1; /* между слоями */
-  clip-path: polygon(50% 50%, 0% 50%, 0% 0%, 50% 0%);
+  right: 0;
+  bottom: 0;
 }
 
 .squares {
@@ -190,7 +186,6 @@ span {
   margin-top: 50px;
   align-items: center;
   padding: 0;
-  b
 }
 
 .square-1 {
@@ -208,3 +203,4 @@ span {
   height: 360px;
   background: rgb(20, 144, 247);
 }
+
