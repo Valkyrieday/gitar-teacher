@@ -50,7 +50,6 @@ nav ul li:hover {
 body {
   font: 16px Montserrat, sans-serif;
   background-color: rgb(230, 230, 230);
-  overflow-x: hidden;
 }
 
 section {
@@ -162,6 +161,7 @@ section {
   align-items: center;
   width: 100%;
   margin-bottom: 50px;
+  position: relative;
 }
 
 .lesson h1 {
@@ -310,18 +310,18 @@ section {
 
 .circle-lesson-1 {
   width: 192px;
-  transform: translate(-50%, -50%);
   height: 192px;
-  right: 12%;
-  top: 25%;
+  right: 0;
+  top: 0;
+  transform: translate(-50%, 50%);
 }
 
 .circle-lesson-2 {
   width: 192px;
-  transform: translate(-50%, -50%);
+  transform: translate(50%, -50%);
   height: 192px;
-  left: 21%;
-  top: 67%;
+  left: 0;
+  bottom: 0;
 }
 
 .inform {
@@ -407,21 +407,17 @@ section {
   padding: 20px;
 }
 
-
-
-
 .circle-inform {
   position: absolute;
-  z-index: 1;
 }
 
 .circle-inform-1 {
   width: 282px;
   height: 282px;
-  left: 93%;
-  bottom: -76%;
+  right: 0;
+  bottom: 0;
+  transform: translate(50%, 50%);
   z-index: -1;
-  
 }
 
 .circle-inform-2 {
