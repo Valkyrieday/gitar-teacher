@@ -428,21 +428,28 @@ section {
 
 .section-bottom {
   display: flex;
-  justify-content: right;
+  justify-content: flex-end;
   align-content: center;
   background-color: white;
   width: 100%;
   position: relative;
   overflow: hidden;
   height: 272px;
+  gap: 40px;
+}
+
+.bottom-left {
+  position: relative;
+  flex: 1;
+  min-width: 300px;
 }
 
 .grif {
-  padding-right: 300px;
   position: absolute;
-  transform: translate(-50%, -50%);
-  left: 35%;
-  top: 55%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -44%);
+  max-width: 100%;
 }
 
 .text-bottom {
