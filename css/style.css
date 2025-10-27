@@ -378,10 +378,10 @@ section {
   content: "";
   position: absolute;
   left: 0;
-  bottom: 0; /* ← ключевой момент */
+  bottom: 0; 
   width: 100%;
   border-bottom: 1px solid black;
-  transform: translateY(100%); /* чтобы линия оторвалась от текста */
+  transform: translateY(100%); 
 }
 
 
